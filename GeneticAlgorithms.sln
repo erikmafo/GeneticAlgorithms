@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneticAlgorithms", "GeneticAlgorithms\GeneticAlgorithms.csproj", "{813818CB-981B-438D-A3BF-5B11B19E473C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneticAlgorithmsTests", "GeneticAlgorithmsTests\GeneticAlgorithmsTests.csproj", "{2CFD4D52-87A3-4BFA-9779-83FBFB76EF95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{813818CB-981B-438D-A3BF-5B11B19E473C}.Debug|x86.ActiveCfg = Debug|x86
+		{813818CB-981B-438D-A3BF-5B11B19E473C}.Debug|x86.Build.0 = Debug|x86
+		{813818CB-981B-438D-A3BF-5B11B19E473C}.Release|x86.ActiveCfg = Release|x86
+		{813818CB-981B-438D-A3BF-5B11B19E473C}.Release|x86.Build.0 = Release|x86
+		{2CFD4D52-87A3-4BFA-9779-83FBFB76EF95}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CFD4D52-87A3-4BFA-9779-83FBFB76EF95}.Debug|x86.Build.0 = Debug|Any CPU
+		{2CFD4D52-87A3-4BFA-9779-83FBFB76EF95}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CFD4D52-87A3-4BFA-9779-83FBFB76EF95}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
