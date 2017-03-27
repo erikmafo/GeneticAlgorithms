@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GeneticAlgorithms
+namespace Erikmafo.GeneticAlgorithms
 {
     public interface Chromosone<T>
     {

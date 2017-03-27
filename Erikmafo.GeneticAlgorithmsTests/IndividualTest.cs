@@ -1,7 +1,7 @@
 ﻿using System;
-using GeneticAlgorithms;
+using Erikmafo.GeneticAlgorithms;
 
-namespace GeneticAlgorithmsTests
+namespace Erikmafo.GeneticAlgorithmsTests
 {
 	using NUnit.Framework;
 	using Moq;

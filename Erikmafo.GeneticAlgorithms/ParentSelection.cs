@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GeneticAlgorithms
+namespace Erikmafo.GeneticAlgorithms
 {
 	public interface ParentSelection
 	{

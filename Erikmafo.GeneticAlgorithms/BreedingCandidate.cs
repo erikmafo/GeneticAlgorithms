@@ -1,5 +1,5 @@
 ﻿using System;
-namespace GeneticAlgorithms
+namespace Erikmafo.GeneticAlgorithms
 {
 	public interface BreedingCandidate
 	{

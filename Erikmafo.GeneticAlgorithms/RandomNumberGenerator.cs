@@ -1,4 +1,4 @@
-﻿namespace GeneticAlgorithms
+﻿namespace Erikmafo.GeneticAlgorithms
 {
 	public interface RandomNumberGenerator
 	{

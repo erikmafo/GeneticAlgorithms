@@ -40,14 +40,16 @@
     <Compile Include="DefaultChromosoneTest.cs" />
     <Compile Include="IndividualTest.cs" />
     <Compile Include="RouletteWheelSelectionTest.cs" />
+    <Compile Include="DefaultPopulationTest.cs" />
+    <Compile Include="BreedingCandidateMocks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GeneticAlgorithms\GeneticAlgorithms.csproj">
+    <ProjectReference Include="..\Erikmafo.GeneticAlgorithms\GeneticAlgorithms.csproj">
       <Project>{813818cb-981b-438d-a3bf-5b11b19e473c}</Project>
-      <Name>GeneticAlgorithms</Name>
+      <Name>Erikmafo.GeneticAlgorithms</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

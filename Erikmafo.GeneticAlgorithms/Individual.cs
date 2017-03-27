@@ -1,5 +1,5 @@
 ﻿using System;
-namespace GeneticAlgorithms
+namespace Erikmafo.GeneticAlgorithms
 {
 	public class Individual<T> : BreedingCandidate
 	{

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace GeneticAlgorithms
+namespace Erikmafo.GeneticAlgorithms
 {
 
     /// <summary>
@@ -19,7 +19,7 @@ namespace GeneticAlgorithms
 		public int Length => genes.Length;
 
 	    /// <summary>
-		/// Initializes a new instance of the <see cref="T:GeneticAlgorithms.Chromosone`1"/> class 
+		/// Initializes a new instance of the <see cref="T:Erikmafo.GeneticAlgorithms.Chromosone`1"/> class 
 		/// with the specified genes.
 		/// </summary>
 		/// <param name="genes">Genes.</param>

@@ -45,6 +45,7 @@
     <Compile Include="RouletteWheelSelection.cs" />
     <Compile Include="RandomNumberGenerator.cs" />
     <Compile Include="BreedingCandidate.cs" />
+    <Compile Include="DefaultPopulation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
