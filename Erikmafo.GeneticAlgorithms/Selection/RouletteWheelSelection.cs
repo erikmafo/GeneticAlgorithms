@@ -1,9 +1,8 @@
 ﻿
 
 using System;
-using Castle.Core.Internal;
 
-namespace Erikmafo.GeneticAlgorithms
+namespace Erikmafo.GeneticAlgorithms.Selection
 {
 	public class RouletteWheelSelection : ParentSelection
 	{

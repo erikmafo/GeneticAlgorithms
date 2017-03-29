@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2CFD4D52-87A3-4BFA-9779-83FBFB76EF95}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>GeneticAlgorithmsTests</RootNamespace>
-    <AssemblyName>GeneticAlgorithmsTests</AssemblyName>
+    <RootNamespace>Erikmafo.GeneticAlgorithmsTests</RootNamespace>
+    <AssemblyName>Erikmafo.GeneticAlgorithmsTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,18 +39,21 @@
   <ItemGroup>
     <Compile Include="DefaultChromosoneTest.cs" />
     <Compile Include="IndividualTest.cs" />
-    <Compile Include="RouletteWheelSelectionTest.cs" />
     <Compile Include="DefaultPopulationTest.cs" />
     <Compile Include="BreedingCandidateMocks.cs" />
+    <Compile Include="Selection\RouletteWheelSelectionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Erikmafo.GeneticAlgorithms\GeneticAlgorithms.csproj">
+    <ProjectReference Include="..\Erikmafo.GeneticAlgorithms\Erikmafo.GeneticAlgorithms.csproj">
       <Project>{813818cb-981b-438d-a3bf-5b11b19e473c}</Project>
       <Name>Erikmafo.GeneticAlgorithms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Selection\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Erikmafo.GeneticAlgorithms;
+using Erikmafo.GeneticAlgorithms.Selection;
 
 namespace Erikmafo.GeneticAlgorithmsTests
 {

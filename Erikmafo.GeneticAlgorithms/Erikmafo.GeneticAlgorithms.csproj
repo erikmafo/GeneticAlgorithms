@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{813818CB-981B-438D-A3BF-5B11B19E473C}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>GeneticAlgorithms</RootNamespace>
-    <AssemblyName>GeneticAlgorithms</AssemblyName>
+    <RootNamespace>Erikmafo.GeneticAlgorithms</RootNamespace>
+    <AssemblyName>Erikmafo.GeneticAlgorithms</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -40,12 +40,15 @@
     <Compile Include="Population.cs" />
     <Compile Include="CrossoverMethod.cs" />
     <Compile Include="FitnessFunction.cs" />
-    <Compile Include="ParentSelection.cs" />
     <Compile Include="Individual.cs" />
-    <Compile Include="RouletteWheelSelection.cs" />
     <Compile Include="RandomNumberGenerator.cs" />
     <Compile Include="BreedingCandidate.cs" />
     <Compile Include="DefaultPopulation.cs" />
+    <Compile Include="Selection\ParentSelection.cs" />
+    <Compile Include="Selection\RouletteWheelSelection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Selection\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

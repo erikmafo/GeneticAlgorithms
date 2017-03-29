@@ -1,12 +1,10 @@
 ﻿using System;
-
+using Erikmafo.GeneticAlgorithms;
+using NUnit.Framework;
+using Moq;
 
 namespace Erikmafo.GeneticAlgorithmsTests
 {
-	using NUnit.Framework;
-	using Moq;
-    using Erikmafo.GeneticAlgorithms;
-
 	[TestFixture]
 	public class DefaultChromosoneTest
 	{
