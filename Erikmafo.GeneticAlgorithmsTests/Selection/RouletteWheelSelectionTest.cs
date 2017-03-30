@@ -30,7 +30,7 @@ namespace Erikmafo.GeneticAlgorithmsTests
 
             foreach (var candidate in candidates)
             {
-                sum += candidate.GetFitness();
+                sum += candidate.Fitness;
             }
 
             populationMock.Setup(pop => pop.Size).Returns(candidates.Count);

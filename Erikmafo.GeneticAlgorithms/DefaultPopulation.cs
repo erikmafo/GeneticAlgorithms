@@ -8,33 +8,19 @@ namespace Erikmafo.GeneticAlgorithms
 
 		private IList<T> candidates = new List<T>();
 
-		private double totalFitness = 0.0;
-
-		public DefaultPopulation()
+	    public DefaultPopulation()
 		{
 		}
 
-		public int Size
-		{
-			get
-			{
-				return candidates.Count;
-			}
-		}
+		public int Size => candidates.Count;
 
-		public double TotalFitness
-		{
-			get
-			{
-				return totalFitness;
-			}
-		}
+	    public double TotalFitness { get; private set; }
 
-		public void Add(T candidate)
+	    public void Add(T candidate)
 		{
 			candidates.Add(candidate);
 
-			totalFitness += candidate.GetFitness();
+			TotalFitness += candidate.Fitness();
 		}
 
 		public IEnumerable<T> GetCandidates()
@@ -44,7 +30,7 @@ namespace Erikmafo.GeneticAlgorithms
 
 		public bool Remove(T candidate)
 		{
-			totalFitness -= candidate.GetFitness();
+			TotalFitness -= candidate.Fitness();
 
 			return candidates.Remove(candidate);
 		}

@@ -30,7 +30,7 @@ namespace Erikmafo.GeneticAlgorithms.Selection
 
 		    foreach (T candidate in population.GetCandidates())
 		    {
-				currentFitness += candidate.GetFitness();
+				currentFitness += candidate.Fitness();
 
 				if (spin <= currentFitness)
 				{

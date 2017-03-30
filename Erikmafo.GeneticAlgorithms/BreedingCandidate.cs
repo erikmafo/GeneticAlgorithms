@@ -4,7 +4,7 @@ namespace Erikmafo.GeneticAlgorithms
 	public interface BreedingCandidate
 	{
 
-		double GetFitness();
+	    double Fitness { get; }
 
 	}
 }

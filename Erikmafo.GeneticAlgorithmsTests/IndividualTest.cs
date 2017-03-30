@@ -17,7 +17,7 @@ namespace Erikmafo.GeneticAlgorithmsTests
 
 			var individual = new Individual<Object>(new Mock<Chromosone<Object>>().Object, fitness);
 
-			Assert.AreEqual(fitness, individual.GetFitness());
+			Assert.AreEqual(fitness, individual.Fitness);
 		}
 
 	}

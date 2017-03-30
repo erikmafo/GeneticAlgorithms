@@ -16,7 +16,7 @@ namespace Erikmafo.GeneticAlgorithmsTests
 		{
 			var mock = new Mock<BreedingCandidate>();
 			mock.Name = "Breeding candidate with fitness equal to " + fitness.ToString();
-			mock.Setup(m => m.GetFitness()).Returns(fitness);
+			mock.Setup(m => m.Fitness).Returns(fitness);
 
 			return mock.Object;
 		}
