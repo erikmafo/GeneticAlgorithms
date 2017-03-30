@@ -26,6 +26,8 @@ namespace Erikmafo.GeneticAlgorithms
         Chromosone<T> DoCrossover(CrossoverMethod crossoverMethod, Chromosone<T> other);
 
 
+		Chromosone<T> ApplyMutationOperator(MutationOperator mutationOperator);
+
         /// <summary>
         /// Creates a copy of this Chromosone
         /// </summary>

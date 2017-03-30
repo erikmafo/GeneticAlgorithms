@@ -6,7 +6,7 @@ namespace Erikmafo.GeneticAlgorithms
 	public class DefaultPopulation<T> : Population<T> where T : BreedingCandidate
 	{
 
-		private IList<T> candidates = new List<T>();
+		private readonly IList<T> candidates = new List<T>();
 
 	    public DefaultPopulation()
 		{
@@ -20,7 +20,7 @@ namespace Erikmafo.GeneticAlgorithms
 		{
 			candidates.Add(candidate);
 
-			TotalFitness += candidate.Fitness();
+			TotalFitness += candidate.Fitness;
 		}
 
 		public IEnumerable<T> GetCandidates()
@@ -30,7 +30,7 @@ namespace Erikmafo.GeneticAlgorithms
 
 		public bool Remove(T candidate)
 		{
-			TotalFitness -= candidate.Fitness();
+			TotalFitness -= candidate.Fitness;
 
 			return candidates.Remove(candidate);
 		}

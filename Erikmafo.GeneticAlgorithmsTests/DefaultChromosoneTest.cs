@@ -8,7 +8,6 @@ namespace Erikmafo.GeneticAlgorithmsTests
 	[TestFixture]
 	public class DefaultChromosoneTest
 	{
-		private DefaultChromosone<int> chromosone;
 		private Mock<CrossoverMethod> crossoverMethodMock = new Mock<CrossoverMethod>();
 
 		[Test]
@@ -16,7 +15,7 @@ namespace Erikmafo.GeneticAlgorithmsTests
 		{
 			int[] values = { 1, 2, 3 };
 
-			chromosone = new DefaultChromosone<int>(values);
+		    Chromosone<int> chromosone = new DefaultChromosone<int>(values);
 
 			Assert.AreEqual(values.Length, chromosone.Length);
 
@@ -60,6 +59,43 @@ namespace Erikmafo.GeneticAlgorithmsTests
 		}
 
 
+
+	    [Test]
+	    public void ShouldCreateExactCopy()
+	    {
+
+	        var chromosone = new DefaultChromosone<string>(new string[] {"H", "E", "L", "L", "O"});
+
+	        var copy = chromosone.CreateCopy();
+
+	        Assert.AreEqual("H", copy.GetGene(0));
+	        Assert.AreEqual("E", copy.GetGene(1));
+	        Assert.AreEqual("L", copy.GetGene(2));
+	        Assert.AreEqual("L", copy.GetGene(3));
+	        Assert.AreEqual("O", copy.GetGene(4));
+
+	    }
+
+
+
+	    [Test]
+	    public void ShouldApplyMutationOperatorToEachGene()
+	    {
+			var chromosone = new DefaultChromosone<int>(new[] { 1, 2, 3 });
+
+	        var mutationOperatorMock = new Mock<MutationOperator>();
+
+			mutationOperatorMock.Setup(mock => mock.MutateGene(0, chromosone)).Returns(1);
+			mutationOperatorMock.Setup(mock => mock.MutateGene(1, chromosone)).Returns(0);
+			mutationOperatorMock.Setup(mock => mock.MutateGene(2, chromosone)).Returns(3);
+
+	        chromosone.ApplyMutationOperator(mutationOperatorMock.Object);
+
+	        Assert.AreEqual(1, chromosone.GetGene(0));
+	        Assert.AreEqual(2, chromosone.GetGene(1));
+	        Assert.AreEqual(3, chromosone.GetGene(2));
+
+	    }
 
 
 

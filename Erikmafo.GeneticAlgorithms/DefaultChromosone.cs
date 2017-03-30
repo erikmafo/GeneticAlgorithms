@@ -52,9 +52,9 @@ namespace Erikmafo.GeneticAlgorithms
 				throw new ArgumentException("Chromosones must be of same length");
 			}
 
-			T[] childGenes = new T[Length];
+			var childGenes = new T[Length];
 
-			for (int i = 0; i < Length; i++)
+			for (var i = 0; i < Length; i++)
 			{
 				childGenes[i] = crossoverMethod.SelectGene(i, this, other);
 			}
@@ -62,21 +62,23 @@ namespace Erikmafo.GeneticAlgorithms
 			return new DefaultChromosone<T>(childGenes);
 		}
 
-        public Chromosone<T> CreateCopy()
+		public Chromosone<T> ApplyMutationOperator(MutationOperator mutationOperator)
         {
-            throw new NotImplementedException();
+			var newGenes = new T[Length];
+
+            for (var i = 0; i < Length; i++)
+            {
+				newGenes[i] = mutationOperator.MutateGene(i, this);
+            }
+
+			return new DefaultChromosone<T>(newGenes);
+
         }
 
-
-        /// <summary>
-		/// Creates an exact copy of this Chromosone
-		/// </summary>
-		/// <returns>The clone.</returns>
-		public Chromosone<T> Clone()
-		{
-		    return null;
-		}
-
+        public Chromosone<T> CreateCopy()
+        {
+            return new DefaultChromosone<T>(genes);
+        }
 
     }
 

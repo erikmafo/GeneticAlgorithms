@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="Chromosone.cs" />
     <Compile Include="DefaultChromosone.cs" />
+    <Compile Include="MutationOperator.cs" />
     <Compile Include="Population.cs" />
     <Compile Include="CrossoverMethod.cs" />
     <Compile Include="FitnessFunction.cs" />
