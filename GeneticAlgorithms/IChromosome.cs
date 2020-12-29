@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Erikmafo.GeneticAlgorithms
+namespace GeneticAlgorithms
 {
-    public interface Chromosone<T>
+    public interface IChromosome<T>
     {
         /// <summary>
         ///  Length property
@@ -18,21 +18,20 @@ namespace Erikmafo.GeneticAlgorithms
         T GetGene(int i);
 
         /// <summary>
-        /// Dos a crossover between this Chromosone and another by applying the specified CrossoverMethod.
+        /// Dos a crossover between this <see cref="IChromosome{T}"/> and another by applying the specified ICrossoverMethod.
         /// </summary>
         /// <returns>The resulting offspring.</returns>
         /// <param name="crossoverMethod">Crossover method.</param>
         /// <param name="other">Other.</param>
-        Chromosone<T> DoCrossover(CrossoverMethod crossoverMethod, Chromosone<T> other);
+        IChromosome<T> DoCrossover(ICrossoverMethod crossoverMethod, IChromosome<T> other);
 
 
-		Chromosone<T> ApplyMutationOperator(MutationOperator mutationOperator);
+        IChromosome<T> ApplyMutationOperator(IMutationOperator mutationOperator);
 
         /// <summary>
-        /// Creates a copy of this Chromosone
+        /// Creates a copy of this <see cref="IChromosome{T}"/>
         /// </summary>
         /// <returns></returns>
-        Chromosone<T> CreateCopy();
-
+        IChromosome<T> CreateCopy();
     }
 }
